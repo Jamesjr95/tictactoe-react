@@ -1,10 +1,27 @@
+import React, {useState} from 'react';
+
 import './App.css';
-import { Box } from './components/Box';
+import {Board} from './components/Board';
 
 function App() {
+
+  const [board, setBoard] = useState(Array(9).fill(null))
+
+  const handleBoxClick = (boxIndex) => {
+    const updatedBoard = board.map((value, index) => {
+      if (index === boxIndex) {
+        return 'X'
+      } else {
+        return value
+      }
+    })
+
+    setBoard(updatedBoard)
+  }
+
   return (
     <div className="App">
-      <Box value='X' onClick={null}/>
+      <Board board={board} onClick={handleBoxClick}/>
     </div>
   );
 }
