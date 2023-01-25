@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 
 import './App.css';
 import {Board} from './components/Board';
+import { ResetButton } from './components/ResetButton';
+import { ScoreBoard } from './components/ScoreBoard';
 
 function App() {
 
@@ -20,6 +22,7 @@ function App() {
   // setting the state of the current player
   const [xPlaying, setXPlaying] = useState(true)
   const [scores, setScores] = useState({xScore:0, oScore:0})
+  const [gameOver, setGameOver] = useState(false)
 
   const handleBoxClick = (boxIndex) => {
     const updatedBoard = board.map((value, index) => {
@@ -55,15 +58,22 @@ function App() {
       const [x,y,z] = WIN_CONDITIONS[i];
 
       if (board[x] && board[x] === board[y] && board[y] === board[z]) {
-        console.log(board[x])
+        setGameOver(true)
         return board[x];
       }
     }
   }
 
+  const resetBoard = () => {
+    setGameOver(false)
+    setBoard(Array(9).fill(null))
+  }
+
   return (
     <div className="App">
-      <Board board={board} onClick={handleBoxClick}/>
+      <ScoreBoard scores={scores} xPlaying={xPlaying}/>
+      <Board board={board} onClick={gameOver ? resetBoard : handleBoxClick}/>
+      <ResetButton resetBoard={resetBoard}/>
     </div>
   );
 }
