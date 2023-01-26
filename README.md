@@ -1,6 +1,6 @@
 ## <p align="center">Calculator App</p>
 
-[![](screenshot/screen-cap.PNG)](https://calculator-react-jay.netlify.app/)
+[![](screenshot/tic-tac-toe.PNG)](https://https://xs-os-react.netlify.app//)
 
 ## Features:
 * The user can perform various basic arithmetic operations
