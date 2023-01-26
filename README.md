@@ -3,15 +3,16 @@
 [![](screenshot/tic-tac-toe.PNG)](https://https://xs-os-react.netlify.app//)
 
 ## Features:
-* The user can perform various basic arithmetic operations
+* The user can play tic tac toe with a friend.
 
 ## Built With
 * React
 
 ## Todos
-1. ~~After an arithmetic operation the next value clears the previous evaluation~~
-2. Add commas to number for readability
-3. Add support for exponentiation, square roots, logarithm's
+1. ~~Add a scoreboard~~
+2. Add option to play against the computer
+3. Add animations when someone wins.
+
 
 ## Project Setup
 
