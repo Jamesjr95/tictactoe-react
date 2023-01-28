@@ -1,6 +1,6 @@
 ## <p align="center">Calculator App</p>
 
-[![](screenshot/tic-tac-toe.PNG)](https://https://xs-os-react.netlify.app//)
+[![](screenshot/tic-tac-toe.PNG)](https://https://xs-os-react.netlify.app)
 
 ## Features:
 * The user can play tic tac toe with a friend.
